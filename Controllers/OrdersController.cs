@@ -25,9 +25,10 @@ namespace WebApplication1.Controllers
         [Route("GetAllOrders")]
         public IActionResult GetAllOrders()
         {
-            SqlDataAdapter sqlDataAdapter = new("SELECT * FROM Orders", sqlConnection);
+
+            SqlDataAdapter dataAdapter = new("SELECT * FROM Orders", sqlConnection);
             var dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
+            dataAdapter.Fill(dataTable);
 
             if (dataTable.Rows.Count > 0)
             {
