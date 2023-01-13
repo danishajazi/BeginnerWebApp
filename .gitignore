@@ -359,3 +359,7 @@ obj/project.assets.json
 obj/project.nuget.cache
 obj/WebApiDemo1.csproj.nuget.dgspec.json
 obj/WebApiDemo1.csproj.nuget.g.props
+bin/Debug/net6.0/WebApiDemo1.dll
+*.dll
+*.exe
+*.cache
