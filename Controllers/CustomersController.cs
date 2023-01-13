@@ -26,6 +26,8 @@ namespace WebApplication1.Controllers
             sqlConnection = new SqlConnection(_Configuration.GetConnectionString("CustomerDBCConnection").ToString());
         }
 
+        //zahid git test
+
         [HttpGet]
         [Route("GetAllCustomers")]
         public IActionResult GetAllCustomers()
