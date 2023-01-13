@@ -130,6 +130,26 @@ namespace WebApplication1.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet]
+        [Route("GetStudentsNameListByCourseId2/{courseId}")]
+        public IActionResult GetStudentsNameListByCourseId2(int courseId)
+        {
+            SqlDataAdapter sqlDataAdapter = new(@"SELECT Students.Name FROM Students
+                                                  INNER JOIN Courses ON Students.CourseId = Courses.Id
+                                                  WHERE CourseId =" + courseId, sqlConnection);
+            DataTable dataTable = new();
+            sqlDataAdapter.Fill(dataTable);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                return Ok(JsonConvert.SerializeObject(dataTable));
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
 
