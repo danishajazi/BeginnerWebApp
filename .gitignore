@@ -363,3 +363,4 @@ bin/Debug/net6.0/WebApiDemo1.dll
 *.dll
 *.exe
 *.cache
+*.dll
